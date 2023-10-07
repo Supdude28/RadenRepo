@@ -32,8 +32,9 @@ route::get('registrasi',[MasyarakatController::class,'registrasi']);
 
 route::post('lagideh',[MasyarakatController::class,'lagideh']);
 
+route::get('validasi',[MasyarakatController::class,'validasi']);
 
-
+route::get('login',[MasyarakatController::class,'login']);
 
 route::get('pengaduan',[MasyarakatController::class,'pengaduan']);
 route::post('ceklogin',[MasyarakatController::class,'ceklogin']);
