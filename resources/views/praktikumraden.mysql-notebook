@@ -1,0 +1,1302 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "\\about\nCREATE DATABASE praktikum_raden\nUSE praktikum_raden\nCREATE TABLE buku(\n    Kode_buku VARCHAR(15) PRIMARY KEY,\n    Judul VARCHAR(50),\n    Penerbit VARCHAR(50),\n    Tahun_terbit INT\n)\nINSERT INTO buku\n    (Kode_buku,Judul,Penerbit,Tahun_terbit)\n    VALUES\n    ('B-001','ALGORITMA DAN PEMOGRAMAN','INFORMATIKA',2007),\n    ('B-002','DASAR DASAR DESAIN','INFORMATIKA',2008),\n    ('B-003','BASISDATA' ,'ERLANGGA',2009),\n    ('B-004','DESAIN WEB','ERLANGGA',2007),\n    ('B-005','OOP','INFORMATIKA',2002),\n    ('B-006','MICROSOFT AXEL','YUDISTIRA',2002),\n    ('B-007','MICROSOFT AXEL','YUDISTIRA',2003),\n    ('B-008','STRUKTURDATA','INFORMATIKA',2010)\nSELECT * FROM buku\nDROP TABLE buku \nCREATE TABLE buku(\n    Kode_buku VARCHAR(15) PRIMARY KEY,\n    Judul VARCHAR(50),\n    Penerbit VARCHAR(50),\n    Tahun_terbit INT\n)\nINSERT INTO buku\n    (Kode_buku,Judul,Penerbit,Tahun_terbit)\n    VALUES\n    ('B-001','ALGORITMA DAN PEMOGRAMAN','INFORMATIKA',2007),\n    ('B-002','DASAR DASAR DESAIN','INFORMATIKA',2008),\n    ('B-003','BASISDATA' ,'ERLANGGA',2009),\n    ('B-004','DESAIN WEB','ERLANGGA',2007),\n    ('B-005','OOP','INFORMATIKA',2002),\n    ('B-006','MICROSOFT AXEL','YUDISTIRA',2002),\n    ('B-007','MICROSOFT AXEL','YUDISTIRA',2003),\n    ('B-008','STRUKTURDATA','INFORMATIKA',2010)\nSELECT * FROM buku\n\n\n\n\nCREATE TABLE peminjaman(\n    id int PRIMARY KEY AUTO_INCREMENT,\n    nisn int,\n    tanggal_pinjam DATE,\n    tanggal_kembali DATE\n)\nINSERT INTO peminjaman \n(nisn,tanggal_pinjam,tanggal_kembali)\nVALUES\n(220809001,2023/09/05,2023/09/12),\n(220809002,2023/09/05,2023/09/12),\n(220809003,2023/09/06,2023/09/13),\n(220809004,2023/09/06,2023/09/13),\n(220809001,2023/09/07,2023/09/14),\n(220809002,2023/09/07,2023/09/14),\n(220809003,2023/09/07,2023/09/15)\nSELECT * FROM peminjaman\nCREATE TABLE detail_peminjaman(\n    id INT PRIMARY KEY AUTO_INCREMENT,\n    id_peminjaman int,\n    kode_buku VARCHAR(15),\n    jumlah int\n)\nINSERT INTO detail_peminjaman\n    (id_peminjaman,kode_buku,jumlah)\n    VALUES\n    (1,'B-001',1),\n    (1,'B-004',1),\n    (2,'B-005',1),\n    (3,'B-006',1),\n    (3,'B-007',2),\n    (4,'B-007',1),\n    (5,'B-001',1),\n    (5,'B-003',2),\n    (5,'B-008',2),\n    (6,'B-008',1),\n    (7,'B-002',1),\n    (7,'B-003',1)\nSELECT * FROM detail_peminjaman\nCREATE TABLE siswa(\n   nisn INT PRIMARY KEY,\n   nama VARCHAR(50),\n   alamat VARCHAR(50),\n   no_telp INT,\n   kode_kelas VARCHAR(15)\n)\nINSERT INTO siswa \n    (nisn,nama,alamat,no_telp,kode_kelas)\n    VALUES\n    (220809001,'SYAEFUL RAHMAN','CITALANG',0856245463214,'X-RPL'),\n    (220809002,'UJANG SAEPUDIN','CISEUREUH',087965313532,'X-TRKO-1'),\n    (220809003,'MAWAR','CAMPAKA',089564321326,'X-RPL'),\n    (220809004,'MELATI','CIBATU',081236548913,'X-TP'),\n    (220809005,'RASYAWATI','JATILUHUR',081234568913,'X-TP'),\n    (220809006,'SUTRISNO','PURNAWARMAN',085136598745,'X-TKRO')\nSELECT * FROM siswa\nSELECT peminjaman.nisn,detail_peminjaman.id_pemijaman,buku.Judul,siswa.nama\nFROM peminjaman\nINNER JOIN detail.peminjaman\nON peminjaman.nisn = detail_peminjaman.id_peminjaman\n",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 104,
+                    "column": 25
+                },
+                "position": {
+                    "lineNumber": 104,
+                    "column": 25
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 82,
+            "firstPosition": {
+                "lineNumber": 94,
+                "column": 1
+            },
+            "firstPositionDeltaTop": -15
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 1,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "content": "Welcome to the MySQL Shell - DB Notebook.\n\nPress Ctrl+Enter to execute the current statement.\n\nExecute \\sql to switch to SQL, \\js to JavaScript and \\ts to TypeScript mode.\nExecute \\help or \\? for help;",
+                            "language": "ansi"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 6
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 2,
+                "end": 2,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "3628e57d-5937-4622-d792-21e5efa8beff",
+                            "content": "OK, 0 records retrieved in 15.64ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 31
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 3,
+                "end": 3,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "12395335-a60f-4946-df42-cc72502be205",
+                            "content": "OK, 0 records retrieved in 0s"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 19
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 4,
+                "end": 9,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 0,
+                            "index": 0,
+                            "content": "MySQL Error (1050): ClassicSession.run_sql: Table 'buku' already exists",
+                            "language": "ansi"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": ""
+                    }
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 129
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 10,
+                "end": 20,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "6f19303a-4eee-423a-a0bc-ce37af9dd0e5",
+                            "content": "OK, 0 records retrieved in 61.713ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 462
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 21,
+                "end": 21,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "2cf79522-f7a0-41f9-9edd-da595e5f15fb"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 18
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "bd320c88-bda0-490d-f440-b17c8c7ca02a",
+                    "resultId": "2cf79522-f7a0-41f9-9edd-da595e5f15fb",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "ALGORITMA DAN PEMOGRAMAN",
+                            "2": "INFORMATIKA",
+                            "3": 2007
+                        },
+                        {
+                            "0": 2,
+                            "1": "DASAR DASAR DESAIN",
+                            "2": "INFORMATIKA",
+                            "3": 2008
+                        },
+                        {
+                            "0": 3,
+                            "1": "BASISDATA",
+                            "2": "ERLANGGA",
+                            "3": 2009
+                        },
+                        {
+                            "0": 4,
+                            "1": "DESAIN WEB",
+                            "2": "ERLANGGA",
+                            "3": 2007
+                        },
+                        {
+                            "0": 5,
+                            "1": "OOP",
+                            "2": "INFORMATIKA",
+                            "3": 2002
+                        },
+                        {
+                            "0": 6,
+                            "1": "MICROSOFT AXEL",
+                            "2": "YUDISTIRA",
+                            "3": 2002
+                        },
+                        {
+                            "0": 7,
+                            "1": "MICROSOFT AXEL",
+                            "2": "YUDISTIRA",
+                            "3": 2003
+                        },
+                        {
+                            "0": 8,
+                            "1": "STRUKTURDATA",
+                            "2": "INFORMATIKA",
+                            "3": 2010
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Kode_buku",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "Judul",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "Penerbit",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "Tahun_terbit",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 8 records retrieved in 0s"
+                    },
+                    "totalRowCount": 8,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM buku"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 22,
+                "end": 22,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "ca458cf6-a7d9-4908-db57-91e4e6c4dd57",
+                            "content": "OK, 0 records retrieved in 171.826ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 16
+                        },
+                        "contentStart": 1,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 23,
+                "end": 28,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "6a753cc2-d8df-4e10-b1e9-cb7ebbf66581",
+                            "content": "OK, 0 records retrieved in 169.983ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 129
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 29,
+                "end": 39,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "fcc246bd-f9ca-4c4f-f36d-1a99490f9739",
+                            "content": "OK, 0 records retrieved in 47.891ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 461
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 40,
+                "end": 40,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "51c78291-2ef9-4939-fa78-844ef5d53854"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 18
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "bd320c88-bda0-490d-f440-b17c8c7ca02a",
+                    "resultId": "51c78291-2ef9-4939-fa78-844ef5d53854",
+                    "rows": [
+                        {
+                            "0": "B-001",
+                            "1": "ALGORITMA DAN PEMOGRAMAN",
+                            "2": "INFORMATIKA",
+                            "3": 2007
+                        },
+                        {
+                            "0": "B-002",
+                            "1": "DASAR DASAR DESAIN",
+                            "2": "INFORMATIKA",
+                            "3": 2008
+                        },
+                        {
+                            "0": "B-003",
+                            "1": "BASISDATA",
+                            "2": "ERLANGGA",
+                            "3": 2009
+                        },
+                        {
+                            "0": "B-004",
+                            "1": "DESAIN WEB",
+                            "2": "ERLANGGA",
+                            "3": 2007
+                        },
+                        {
+                            "0": "B-005",
+                            "1": "OOP",
+                            "2": "INFORMATIKA",
+                            "3": 2002
+                        },
+                        {
+                            "0": "B-006",
+                            "1": "MICROSOFT AXEL",
+                            "2": "YUDISTIRA",
+                            "3": 2002
+                        },
+                        {
+                            "0": "B-007",
+                            "1": "MICROSOFT AXEL",
+                            "2": "YUDISTIRA",
+                            "3": 2003
+                        },
+                        {
+                            "0": "B-008",
+                            "1": "STRUKTURDATA",
+                            "2": "INFORMATIKA",
+                            "3": 2010
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Kode_buku",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "Judul",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "Penerbit",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "Tahun_terbit",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 8 records retrieved in 15.586ms"
+                    },
+                    "totalRowCount": 8,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM buku"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 41,
+                "end": 41,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "c9e9174c-5833-4a86-d365-54d105ee5555",
+                            "content": "OK, 0 records retrieved in 203.212ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": []
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 42,
+                "end": 42,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "b6057b62-dae8-45df-c6e9-38f02ff9c85d",
+                            "content": "OK, 0 records retrieved in 171.863ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": []
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 43,
+                "end": 43,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "770e6369-4909-47b8-be11-a556df0a889d"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": []
+            },
+            "data": [
+                {
+                    "tabId": "bd320c88-bda0-490d-f440-b17c8c7ca02a",
+                    "resultId": "770e6369-4909-47b8-be11-a556df0a889d",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": 220809001,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 2,
+                            "1": 220809003,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 3,
+                            "1": 220809004,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 4,
+                            "1": 220809005,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 5,
+                            "1": 220809006,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 6,
+                            "1": 220809007,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 7,
+                            "1": 220809008,
+                            "2": null,
+                            "3": null
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "nisn",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "tanggal_pinjam",
+                            "field": "2",
+                            "dataType": {
+                                "type": 28
+                            }
+                        },
+                        {
+                            "title": "tanggal_kembali",
+                            "field": "3",
+                            "dataType": {
+                                "type": 28
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 7 records retrieved in 1.001ms"
+                    },
+                    "totalRowCount": 7,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM peminjaman"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 44,
+                "end": 44,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "5e857098-fb91-4e09-e251-34c58ec0c667",
+                            "content": "OK, 0 records retrieved in 296.888ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": []
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 45,
+                "end": 50,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "8a9ab8cc-6bc0-4827-ed75-62c000160bd6",
+                            "content": "OK, 0 records retrieved in 297.006ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 129
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 51,
+                "end": 60,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "a97940fb-6457-48e9-adcc-f2560dc5b28b",
+                            "content": "OK, 0 records retrieved in 109.456ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 312
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 61,
+                "end": 61,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "ba027af5-6a2d-487a-9774-29ff6473c2e9"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 24
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "bd320c88-bda0-490d-f440-b17c8c7ca02a",
+                    "resultId": "ba027af5-6a2d-487a-9774-29ff6473c2e9",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": 220809001,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 2,
+                            "1": 220809002,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 3,
+                            "1": 220809003,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 4,
+                            "1": 220809004,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 5,
+                            "1": 220809001,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 6,
+                            "1": 220809002,
+                            "2": null,
+                            "3": null
+                        },
+                        {
+                            "0": 7,
+                            "1": 220809003,
+                            "2": null,
+                            "3": null
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "nisn",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "tanggal_pinjam",
+                            "field": "2",
+                            "dataType": {
+                                "type": 28
+                            }
+                        },
+                        {
+                            "title": "tanggal_kembali",
+                            "field": "3",
+                            "dataType": {
+                                "type": 28
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 7 records retrieved in 0s"
+                    },
+                    "totalRowCount": 7,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM peminjaman"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 62,
+                "end": 67,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "14dd4927-019d-459a-d884-cec978e92a3a",
+                            "content": "OK, 0 records retrieved in 218.843ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 137
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 68,
+                "end": 82,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "c8dc5d22-078e-40db-c37c-07a9e7afc821",
+                            "content": "OK, 0 records retrieved in 93.851ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 304
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 83,
+                "end": 83,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "8ab275c1-c594-4858-8649-03d2c09c3913"
+                    ]
+                },
+                "currentHeight": 292.9937744140625,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 31
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "bd320c88-bda0-490d-f440-b17c8c7ca02a",
+                    "resultId": "8ab275c1-c594-4858-8649-03d2c09c3913",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": 1,
+                            "2": "B-001",
+                            "3": 1
+                        },
+                        {
+                            "0": 2,
+                            "1": 1,
+                            "2": "B-004",
+                            "3": 1
+                        },
+                        {
+                            "0": 3,
+                            "1": 2,
+                            "2": "B-005",
+                            "3": 1
+                        },
+                        {
+                            "0": 4,
+                            "1": 3,
+                            "2": "B-006",
+                            "3": 1
+                        },
+                        {
+                            "0": 5,
+                            "1": 3,
+                            "2": "B-007",
+                            "3": 2
+                        },
+                        {
+                            "0": 6,
+                            "1": 4,
+                            "2": "B-007",
+                            "3": 1
+                        },
+                        {
+                            "0": 7,
+                            "1": 5,
+                            "2": "B-001",
+                            "3": 1
+                        },
+                        {
+                            "0": 8,
+                            "1": 5,
+                            "2": "B-003",
+                            "3": 2
+                        },
+                        {
+                            "0": 9,
+                            "1": 5,
+                            "2": "B-008",
+                            "3": 2
+                        },
+                        {
+                            "0": 10,
+                            "1": 6,
+                            "2": "B-008",
+                            "3": 1
+                        },
+                        {
+                            "0": 11,
+                            "1": 7,
+                            "2": "B-002",
+                            "3": 1
+                        },
+                        {
+                            "0": 12,
+                            "1": 7,
+                            "2": "B-003",
+                            "3": 1
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "id_peminjaman",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "kode_buku",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "jumlah",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 12 records retrieved in 0.992ms"
+                    },
+                    "totalRowCount": 12,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM detail_peminjaman"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 84,
+                "end": 90,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "b2d8f92e-e13e-4eeb-da0f-6edab20b5df3",
+                            "content": "OK, 0 records retrieved in 195.019ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 132
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 91,
+                "end": 99,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "ca4d6475-d7ee-4a55-e386-eb301b716cbf",
+                            "content": "OK, 0 records retrieved in 78.135ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 443
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 100,
+                "end": 100,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "3ab42951-da3b-4a1f-f4ab-85ddb2fef1ab"
+                    ]
+                },
+                "currentHeight": 217.609375,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 19
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "bd320c88-bda0-490d-f440-b17c8c7ca02a",
+                    "resultId": "3ab42951-da3b-4a1f-f4ab-85ddb2fef1ab",
+                    "rows": [
+                        {
+                            "0": 220809001,
+                            "1": "SYAEFUL RAHMAN",
+                            "2": "CITALANG",
+                            "3": 2147483647,
+                            "4": "X-RPL"
+                        },
+                        {
+                            "0": 220809002,
+                            "1": "UJANG SAEPUDIN",
+                            "2": "CISEUREUH",
+                            "3": 2147483647,
+                            "4": "X-TRKO-1"
+                        },
+                        {
+                            "0": 220809003,
+                            "1": "MAWAR",
+                            "2": "CAMPAKA",
+                            "3": 2147483647,
+                            "4": "X-RPL"
+                        },
+                        {
+                            "0": 220809004,
+                            "1": "MELATI",
+                            "2": "CIBATU",
+                            "3": 2147483647,
+                            "4": "X-TP"
+                        },
+                        {
+                            "0": 220809005,
+                            "1": "RASYAWATI",
+                            "2": "JATILUHUR",
+                            "3": 2147483647,
+                            "4": "X-TP"
+                        },
+                        {
+                            "0": 220809006,
+                            "1": "SUTRISNO",
+                            "2": "PURNAWARMAN",
+                            "3": 2147483647,
+                            "4": "X-TKRO"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "nisn",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "nama",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "alamat",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "no_telp",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "kode_kelas",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 2.001ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM siswa"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 101,
+                "end": 104,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 0,
+                            "index": 0,
+                            "content": "MySQL Error (1146): ClassicSession.run_sql: Table 'detail.peminjaman' doesn't exist",
+                            "language": "ansi"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": ""
+                    }
+                },
+                "currentHeight": 33.1875,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 173
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 105,
+                "end": 105,
+                "language": "mysql",
+                "currentHeight": 180,
+                "statements": []
+            },
+            "data": []
+        }
+    ]
+}
