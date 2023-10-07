@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MasyarakatController;
 use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
@@ -32,10 +33,10 @@ route::get('registrasi',[MasyarakatController::class,'registrasi']);
 
 route::post('lagideh',[MasyarakatController::class,'lagideh']);
 
-route::get('validasi',[MasyarakatController::class,'validasi']);
+route::get('validasi',[AdminController::class,'validasi']);
 
 route::get('login',[MasyarakatController::class,'login']);
 
 route::get('pengaduan',[MasyarakatController::class,'pengaduan']);
 route::post('ceklogin',[MasyarakatController::class,'ceklogin']);
-route::get('dashboard',[MasyarakatController::class,'dashboard']);
+route::get('dashboard',[AdminController::class,'dashboard']);

@@ -52,4 +52,8 @@ class MasyarakatController extends Controller
     public function pengaduan(){
         return view('Masyarakat.pengaduan');
     }
+
+    public function validasi(){
+        return view('administrator.validasi');
+    }
 }

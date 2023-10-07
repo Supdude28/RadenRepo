@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
+{{-- awal nav --}}
+
+{{-- akhir nav --}}
     <div id="main" class="d-flex align-items-center vh-100">
             <div class="container">
                 <div class=" card shadow m-auto" style="width: 400px" >

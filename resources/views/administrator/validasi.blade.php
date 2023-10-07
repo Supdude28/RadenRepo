@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Validasi</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <style>
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
         .masku{
             margin-left: 320px;
             position: absolute;
@@ -91,19 +120,19 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="{{url('dashboard')}}" class="nav-link link-dark" aria-current="page">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
           Home
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link link-dark">
+        <a href="#"  class="nav-link link-dark">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
           Laporan
         </a>
       </li>
       <i class="bi bi-card-checklist">
-        <a href="#" class="nav-link link-dark">
+        <a href="#" class="nav-link active" aria-current="page">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
           Validasi
         </a>
@@ -118,8 +147,8 @@
     <hr>
     <div class="dropdown">
       <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong>mdo</strong>
+        {{-- <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2"> --}}
+        <strong>Dadang Sumatra</strong>
       </a>
       <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
         <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -136,7 +165,7 @@
         <table>
             <thead>
                 <tr>
-                <th scope="col">Status Pengaduan</th>
+                <th scope="col">Status Validasi Pengaduan</th>
             </tr>
         </thead>
         <tbody>
@@ -146,9 +175,10 @@
         <thead>
           <tr>
             <th scope="col">No</th>
+            <th scope="col">NIK</th>
             <th scope="col">Nama</th>
-            <th scope="col">Tanggal</th>
-            <th scope="col">Status</th>
+            <th scope="col">Jenis Laporan</th>
+            <th scope="col">Aksi</th>
           </tr>
           
         </thead>
