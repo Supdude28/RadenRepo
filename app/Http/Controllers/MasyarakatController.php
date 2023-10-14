@@ -35,14 +35,14 @@ class MasyarakatController extends Controller
         return view('Masyarakat.login');
     }
     public function tampilanuatama(){
-        return view('tampilanuatama');
+        return view('Masyarakat.tampilanuatama');
     }
 
     public function ceklogin(Request $request){
         $m = new Masyarakat();
         // cek username dan password
         if($m->where('username',$request->input('username'))->where('password',$request->input('password'))->exists()){
-            return redirect('tampilanuatama');
+            return redirect('Masyarakat.tampilanuatama');
         }
         return back()->with('pesan', 'Username dan Password tidak terdaftar');
     }
@@ -56,4 +56,5 @@ class MasyarakatController extends Controller
     public function validasi(){
         return view('administrator.validasi');
     }
+
 }

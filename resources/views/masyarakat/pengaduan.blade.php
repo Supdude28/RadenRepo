@@ -6,10 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laporan</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+      .navin{
+        background-color:rgb(203, 87, 87);
+      }
+    </style>
 </head>
+
 <body>
     {{-- Nav awa --}}
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navin">
         <div class="container-fluid">
           <a class="navbar-brand" >Laporan</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +35,7 @@
             </ul>
             <form class="d-flex">
                 <div class="pale">
-                    <button class="btn btn-outline-success" type="submit">Kembali</button>
+                  <a href="{{url('tampilanuatama')}}" button class="btn btn-outline-light ">Kembali</a>
                 </div>
             </form>
           </div>
@@ -51,7 +57,7 @@
                                         Anda gagal registrasi
                                       </div>
                                     @endif
-                                        <form action="{{url('laporan')}}" method="POST">
+                                        <form action="{{url('pengaduan')}}" method="POST">
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="nik" class="form-label">NIK</label>

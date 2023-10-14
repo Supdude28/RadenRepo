@@ -38,5 +38,7 @@ route::get('validasi',[AdminController::class,'validasi']);
 route::get('login',[MasyarakatController::class,'login']);
 
 route::get('pengaduan',[MasyarakatController::class,'pengaduan']);
+route::post('pengaduan',[MasyarakatController::class,'pengaduan']);
+
 route::post('ceklogin',[MasyarakatController::class,'ceklogin']);
 route::get('dashboard',[AdminController::class,'dashboard']);

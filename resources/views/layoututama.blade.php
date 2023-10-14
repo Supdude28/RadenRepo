@@ -43,6 +43,9 @@
         
         }
         
+        .navin{
+          background-color: rgb(203, 87, 87);
+        }
     </style>
 </head>
 <body>
@@ -63,7 +66,7 @@
     </form>
   </div>
 </nav> --}}
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top navin">
     <div class="container-fluid">
       <a class="navbar-brand" >Menu Utama</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,24 +86,15 @@
         </ul>
         <form class="d-flex">
             <div class="pale">
-                <button href="#" class="btn btn-outline-light" role="button" data-bs-toggle="button">Login</button>
-                <button class="btn btn-outline-success" type="submit">Daftar</button>
+              <a href="" class="btn btn-outline-light ">Login</a>
+              <a href="" class="btn btn-outline-info">Daftar</a>
             </div>
         </form>
       </div>
     </div>
   </nav>
 {{-- navbar akhir --}}
-
-
-<div class="puwa">
-    <h1>Layanan Pengaduan Masyarakat</h1>
-    <h3>Anda Melapor Anda Hebat</h3>
-</div>
-<div class="din" style="height: 100px;">
-    
-    <button type"button" class="btn btn-outline-dark">Tulis Laporan Anda</button>
-</div>
+@yield('isi_halaman')
 
 </body>
 </html>
