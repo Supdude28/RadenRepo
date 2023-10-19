@@ -42,7 +42,9 @@
                                 <input type="number" class="form-control" name="telpon" id="telpon" placeholder="No Telepon">
                             </div>
                                 <button class="btn form-control btn-primary mb-2">Register</button>
-                                <button class="btn form-control btn-outline-success mb-2" type="reset">Batal</button>
+                                <a href="" class="btn form-control btn-outline-success mb-2" type="reset">Batal</a>
+                                <a href="{{url('login')}}" class="btn form-control btn-outline-success mb-2">Kembali</a>
+                                
                         </form>
                     </div>
                 </div>

@@ -12,7 +12,7 @@
     body {
     padding: 10;
     margin: 0;
-    background-color: rgb(230, 70, 70);
+    background-color: rgb(203, 87, 87);
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -114,7 +114,7 @@ a:hover{
             <input type="submit" name="submit" value="login" id="submit"><br>
             
             <a href="#  ">Forgot Password ?</a><br>
-            <a href="#">Registrasi</a><br>
+            <a href="{{url('registrasi')}}">Registrasi</a><br>
         </form>
     </div>
 </body>

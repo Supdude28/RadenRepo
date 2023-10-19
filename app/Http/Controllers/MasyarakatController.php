@@ -11,7 +11,7 @@ class MasyarakatController extends Controller
     public function index(){
         // buat objek 
         $pakdes = new Masyarakat();
-        // return view ('Masyarakat.registar',['bebas'=>$pakdes->all()]);
+        // return view ('Masyarakat.registrasi',['bebas'=>$pakdes->all()]);
     }
     public function registrasi(){
         // buat objek
@@ -41,10 +41,18 @@ class MasyarakatController extends Controller
     public function ceklogin(Request $request){
         $m = new Masyarakat();
         // cek username dan password
-        if($m->where('username',$request->input('username'))->where('password',$request->input('password'))->exists()){
-            return redirect('Masyarakat.tampilanuatama');
+        $m = $m->where('username',$request->input('username'))->where('password',$request->input('password'));
+
+        if($m->exists()){
+            session([
+                'username'=> $request->input('username'),
+                'password'=> $request->input('password')
+            ]);
+            return redirect('/masyarakatin');
+
         }
-        return back()->with('pesan', 'Username dan Password tidak terdaftar');
+        
+        return back();
     }
     public function dashboard(){
         return view('Administrator.dashboard');
@@ -55,6 +63,10 @@ class MasyarakatController extends Controller
 
     public function validasi(){
         return view('administrator.validasi');
+    }
+    public function logout(){
+        session()->flush();
+        return back();
     }
 
 }

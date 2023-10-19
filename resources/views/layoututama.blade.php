@@ -86,8 +86,10 @@
         </ul>
         <form class="d-flex">
             <div class="pale">
-              <a href="" class="btn btn-outline-light ">Login</a>
-              <a href="" class="btn btn-outline-info">Daftar</a>
+                <a href="/admin/logout" class="btn btn-success">
+                    Sign Out
+                    <i class="bi bi-box-arrow-right"></i>
+                </a>
             </div>
         </form>
       </div>
