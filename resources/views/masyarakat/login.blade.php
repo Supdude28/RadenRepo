@@ -19,7 +19,7 @@
 
 .container {
     height: 60%;
-    width: 400px;
+    width: 500px;
     top: 50%;
     left: 50%;
    box-shadow: 0 2px 10px black;
@@ -28,8 +28,8 @@
     transform: translate(-50%, -50%);
     background-color: white;
     text-align: center;
+    border-radius: 40px;
     border-radius: 20px;
-    border-radius: 10px;
 }
 
 img {
@@ -105,10 +105,10 @@ a:hover{
             </div>
             @endif
             @csrf
-            <div>
+            <div class="gung">
                 <input type="text" name="username" placeholder="username" id="input"><br>
             </div>
-            <div>
+            <div class="agung">
                 <input type="password" name="password" placeholder="password" id="input"><br>
             </div>
             <input type="submit" name="submit" value="login" id="submit"><br>

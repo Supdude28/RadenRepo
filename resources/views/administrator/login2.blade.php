@@ -12,24 +12,24 @@
     body {
     padding: 10;
     margin: 0;
-    background-color: rgb(230, 70, 70);
+    background-color: #4384EE;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
     height: 60%;
-    width: 400px;
+    width: 500px;
     top: 50%;
     left: 50%;
    box-shadow: 0 2px 10px black;
     position: absolute;
-    padding: 10px;
+    padding: 20px;
     transform: translate(-50%, -50%);
     background-color: white;
     text-align: center;
+    border-radius: 40px;
     border-radius: 20px;
-    border-radius: 10px;
 }
 
 img {
@@ -47,7 +47,7 @@ h1 {
 }
 
 h2 {
-    color: rgb(240, 88, 88);
+    color: #4384EE;
     padding-top: 10px;
     font-size: 30px;
 }
@@ -71,18 +71,18 @@ h2 {
 
 #submit:hover {
     color: rgb(0, 0, 0);
-    background-color: rgb(246, 81, 44);
+    background-color: #4384EE;
     cursor: pointer;
 }
 
 a {
     font-size: 12px;
     color: rgb(0, 0, 0);
-    text-decoration: rgb(247, 81, 44);
+    text-decoration: #4384EE;
 }
 
 a:hover{
-    color: rgb(247, 81, 44);
+    color: #4384EE;
 }
 </style>
 
@@ -91,9 +91,9 @@ a:hover{
         <div class="col">
         </div>
         <h1>SELAMAT DATANG</h1>
-        <h2>LOGIN</h2>
+        <h2>LOGIN ADMIN</h2>
         <!-- Login -->
-        <form action="{{url('ceklogin')}}" method="POST">
+        <form action="{{url('cekloginadmin')}}" method="POST">
             @if (session('info'))
                             <div class="alert alert-success" role="alert">
                                 {{session('info')}}
@@ -105,16 +105,16 @@ a:hover{
             </div>
             @endif
             @csrf
-            <div>
+            <div class="gung">
                 <input type="text" name="username" placeholder="username" id="input"><br>
             </div>
-            <div>
+            <div class="agung">
                 <input type="password" name="password" placeholder="password" id="input"><br>
             </div>
             <input type="submit" name="submit" value="login" id="submit"><br>
             
             <a href="#  ">Forgot Password ?</a><br>
-            <a href="#">Registrasi</a><br>
+            <a href="{{url('registrasi')}}">Registrasi</a><br>
         </form>
     </div>
 </body>

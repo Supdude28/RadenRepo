@@ -35,7 +35,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="passwrod" class="form-label">Password</label>
-                                <input type="text" class="form-control" name="password" id="password" placeholder="Password">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                             </div>
                             <div class="mb-3">
                                 <label for="telpon" class="form-label">No Telepon</label>

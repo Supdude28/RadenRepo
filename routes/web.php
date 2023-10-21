@@ -28,8 +28,6 @@ route::get('login',[MasyarakatController::class,'login']);
 // data masyrakat
 route::get('masyarakat',[MasyarakatController::class,'index']);
 // route::get('tampilanuatama',[MasyarakatController::class,'tampilanuatama']);
-
-
 Route::prefix('masyarakatin')->group(function(){
     Route::get('/',function(){
         return view('Masyarakat.tampilanuatama');
@@ -39,18 +37,12 @@ Route::prefix('masyarakatin')->group(function(){
     route::get('logout',[MasyarakatController::class,'logout']);
 });
 route::get('login',[MasyarakatController::class,'login']);
-
-
+route::get('pengaduan',[MasyarakatController::class,'pengaduan'])->middleware(Validasiini::class);
+route::post('pengaduanin',[MasyarakatController::class,'pengaduanin']);    
 route::get('registrasi',[MasyarakatController::class,'registrasi']);
-
 route::post('lagideh',[MasyarakatController::class,'lagideh']);
 
+// data admin
 route::get('validasi',[AdminController::class,'validasi']);
-
-
-
-route::get('pengaduan',[MasyarakatController::class,'pengaduan']);
-route::post('pengaduan',[MasyarakatController::class,'pengaduan']);
-
 route::post('ceklogin',[MasyarakatController::class,'ceklogin']);
 route::get('dashboard',[AdminController::class,'dashboard']);

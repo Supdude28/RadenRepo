@@ -35,7 +35,7 @@
             </ul>
             <form class="d-flex">
                 <div class="pale">
-                  <a href="{{url('tampilanuatama')}}" button class="btn btn-outline-light ">Kembali</a>
+                  <a href="{{url('/masyarakatin')}}" button class="btn btn-outline-light ">Kembali</a>
                 </div>
             </form>
           </div>
@@ -57,7 +57,7 @@
                                         Anda gagal registrasi
                                       </div>
                                     @endif
-                                        <form action="{{url('pengaduan')}}" method="POST">
+                                        <form action="{{url('pengaduanin')}}" method="POST">
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="nik" class="form-label">NIK</label>

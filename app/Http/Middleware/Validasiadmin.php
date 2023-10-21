@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class Validasiini
+class Validasiadmin
 {
     /**
      * Handle an incoming request.
@@ -15,11 +15,6 @@ class Validasiini
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!session('username')){
-            return redirect('masyarakatin/login');
-        }
-
-         
         return $next($request);
     }
 }

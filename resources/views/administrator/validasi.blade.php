@@ -27,8 +27,8 @@
             @foreach ($ui as $item)
                 <tr>
                   <td>{{$item->id_pengaduan}}</td>
-                  <td>{{$item->tanggal_pengaduan}}</td>
                   <td>{{$item->nik}}</td>
+                  <td>{{$item->tanggal_pengaduan}}</td>
                   <td>{{$item->isi_laporan}}</td>
                   <td></td>
                 </tr>

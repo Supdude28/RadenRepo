@@ -86,7 +86,7 @@
         </ul>
         <form class="d-flex">
             <div class="pale">
-                <a href="/admin/logout" class="btn btn-success">
+                <a href="/masyarakatin/logout" class="btn btn-success">
                     Sign Out
                     <i class="bi bi-box-arrow-right"></i>
                 </a>

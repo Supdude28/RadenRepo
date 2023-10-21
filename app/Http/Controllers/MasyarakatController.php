@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Masyarakat;
+use App\Models\Pengaduan;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -61,12 +62,39 @@ class MasyarakatController extends Controller
         return view('Masyarakat.pengaduan');
     }
 
-    public function validasi(){
-        return view('administrator.validasi');
+    public function pengaduanin(Request $request){
+        // cek data yang dikirimkan
+        $tes = $request->validate([
+            'nik'=>'required|max:16',
+            'tanggal_pengaduan'=>'required|date',
+            'foto'=>'required',
+            'isi_laporan'=>'required'
+        ]);
+
+        // // upload image
+        // $image = $request->file('foto');
+        // $image->storeAs('public/posts', $image->hashName());
+
+        $den = new Pengaduan();
+        $den -> create([
+            'nik'=>$request->nik,
+            'tanggal_pengaduan'=>$request->tanggal_pengaduan,
+            'foto'=>$request->foto,
+            'isi_laporan'=>$request->isi_laporan
+        ]);
+        //return redirect('masyarakat/registrasi');
+        return redirect('masyarakat')->with('pesan','Laporan berhasil dikirim');
+    
     }
+
+    // public function validasi(){
+    //     return view('administrator.validasi');
+    // }
     public function logout(){
         session()->flush();
         return back();
     }
+
+   
 
 }
