@@ -57,7 +57,7 @@
                                         Anda gagal registrasi
                                       </div>
                                     @endif
-                                        <form action="{{url('pengaduanin')}}" method="POST">
+                                        <form action="{{url('pengaduanin')}}" method="POST" enctype="multipart/form-data">
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="nik" class="form-label">NIK</label>

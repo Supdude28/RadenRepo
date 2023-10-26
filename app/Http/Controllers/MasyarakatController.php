@@ -29,7 +29,7 @@ class MasyarakatController extends Controller
             'password'=>$request->password,
             'telpon'=>$request->telpon,
         ]);
-        return redirect();
+        return back();
     }
 
     public function login(){
@@ -64,26 +64,35 @@ class MasyarakatController extends Controller
 
     public function pengaduanin(Request $request){
         // cek data yang dikirimkan
-        $tes = $request->validate([
-            'nik'=>'required|max:16',
-            'tanggal_pengaduan'=>'required|date',
-            'foto'=>'required',
-            'isi_laporan'=>'required'
-        ]);
+        // $tes = $request->validate([
+        //     'nik'=>'required|max:16',
+        //     'tanggal_pengaduan'=>'required|date',
+        //     'foto'=>'required',
+        //     'isi_laporan'=>'required'
+        // ]);
 
-        // // upload image
-        // $image = $request->file('foto');
-        // $image->storeAs('public/posts', $image->hashName());
+        // // // upload image
+        // // $image = $request->file('foto');
+        // // $image->storeAs('public/posts', $image->hashName());
 
-        $den = new Pengaduan();
-        $den -> create([
-            'nik'=>$request->nik,
-            'tanggal_pengaduan'=>$request->tanggal_pengaduan,
-            'foto'=>$request->foto,
-            'isi_laporan'=>$request->isi_laporan
-        ]);
-        //return redirect('masyarakat/registrasi');
-        return redirect('masyarakat')->with('pesan','Laporan berhasil dikirim');
+        // $den = new Pengaduan();
+        // $den -> create([
+        //     'nik'=>$request->nik,
+        //     'tanggal_pengaduan'=>$request->tanggal_pengaduan,
+        //     'foto'=>$request->foto,
+        //     'isi_laporan'=>$request->isi_laporan
+        // ]);
+        // //return redirect('masyarakat/registrasi');
+        // return redirect('masyarakat')->with('pesan','Laporan berhasil dikirim');
+         // variable untuk menampung file
+         $foto = $request->file('foto');
+
+         // tentukan path file akan di simpan
+         $foleder = 'upload_data';
+ 
+         // pindahkan file ke target folder
+         $foto->move($foleder, $foto->getClientOriginalName());
+         return "done";
     
     }
 
@@ -95,6 +104,8 @@ class MasyarakatController extends Controller
         return back();
     }
 
-   
+   public function laporin(Request $request){
+       
+    }
 
 }

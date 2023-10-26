@@ -18,7 +18,12 @@
         }
         .puwa{
             text-align: center;
-            margin-top: 300px;
+            margin-top: 50px;
+            background-color: #4384EE;
+            padding: 100px 25px;
+            color: white;
+            margin-bottom: 13
+
         }
         .din{
             margin-top: 100px;
@@ -67,8 +72,8 @@
   </div>
 </nav> --}}
 <nav class="navbar navbar-expand-md navbar-dark fixed-top navin">
-    <div class="container-fluid">
-      <a class="navbar-brand" >Menu Utama</a>
+    <div class="container-fluid ">
+      <a class="navbar-brand " >Menu Utama</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -86,7 +91,7 @@
         </ul>
         <form class="d-flex">
             <div class="pale">
-                <a href="/masyarakatin/logout" class="btn btn-success">
+                <a href="/masyarakatin/logout" class="btn btn-warning">
                     Sign Out
                     <i class="bi bi-box-arrow-right"></i>
                 </a>

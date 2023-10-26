@@ -10,7 +10,9 @@
 
     
     <style>
-      
+      .pale {
+            padding: 8px
+        }
         .masku{
             margin-left: 320px;
             position: absolute;
@@ -117,6 +119,12 @@
             <i class="bi bi-phone-vibrate-fill"></i>
             Lapor!!
         </span>
+        <div class="pale">
+          <a href="/masyarakatin/logout" class="btn btn-warning">
+              Sign Out
+              <i class="bi bi-box-arrow-right"></i>
+          </a>
+      </div>
     </nav>
   <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
     {{-- <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -152,9 +160,9 @@
       </li>
     </ul>
     <hr>
-  
     {{--akhir navui  --}}
     
+      
     <div class="masku">
       
         <table>

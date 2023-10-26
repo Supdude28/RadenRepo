@@ -15,9 +15,9 @@
             <div class="container">
                 <div class=" card shadow m-auto" style="width: 400px" >
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
+                        {{-- <div class="alert alert-success" role="alert">
                             A simple success alert—check it out!
-                          </div>    
+                          </div>     --}}
                         <h4 class="h4">Daftarkan diri anda</h4>
                         <form action="{{url('lagideh')}}" method="POST" >
                             @csrf

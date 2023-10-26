@@ -22,11 +22,9 @@
     width: 500px;
     top: 50%;
     left: 50%;
-   box-shadow: 0 2px 10px black;
     position: absolute;
     padding: 20px;
     transform: translate(-50%, -50%);
-    background-color: white;
     text-align: center;
     border-radius: 40px;
     border-radius: 20px;
@@ -47,13 +45,12 @@ h1 {
 }
 
 h2 {
-    color: #4384EE;
+    color: #fcfcfc;
     padding-top: 10px;
     font-size: 30px;
 }
 
 #input {
-    background: transparent;
     border: none;
     border-bottom: 2px solid rgb(0, 0, 0);
     padding: 11px;
@@ -71,18 +68,18 @@ h2 {
 
 #submit:hover {
     color: rgb(0, 0, 0);
-    background-color: #4384EE;
+    background-color: #57ee43;
     cursor: pointer;
 }
 
 a {
     font-size: 12px;
     color: rgb(0, 0, 0);
-    text-decoration: #4384EE;
+    text-decoration: #57ee43;
 }
 
 a:hover{
-    color: #4384EE;
+    color: #57ee43;
 }
 </style>
 
@@ -94,6 +91,7 @@ a:hover{
         <h2>LOGIN ADMIN</h2>
         <!-- Login -->
         <form action="{{url('cekloginadmin')}}" method="POST">
+            @csrf
             @if (session('info'))
                             <div class="alert alert-success" role="alert">
                                 {{session('info')}}
@@ -113,8 +111,8 @@ a:hover{
             </div>
             <input type="submit" name="submit" value="login" id="submit"><br>
             
-            <a href="#  ">Forgot Password ?</a><br>
-            <a href="{{url('registrasi')}}">Registrasi</a><br>
+            <a href="#">Forgot Password ?</a><br>
+            <a href="{{url('registrasiadmin')}}">Registrasi</a><br>
         </form>
     </div>
 </body>
