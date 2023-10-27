@@ -161,20 +161,19 @@
     </ul>
     <hr>
     {{--akhir navui  --}}
-    
+
       
-    <div class="masku">
-      
-        <table>
-            <thead>
-                <tr>
-                <th scope="col">Status Pengaduan</th>
-            </tr>
-        </thead>
-        <tbody>
-    </table>
-    <table class="table">
         
+  <div class="masku">
+    <table>
+      <thead>
+          <tr>
+          <th scope="col">Status Pengaduan</th>
+      </tr>
+  </thead>
+  <tbody>
+</table>
+    <table class="table">
         <thead>
           <tr>
             <th scope="col">No</th>
@@ -194,6 +193,7 @@
           </tr>
         </tbody>
     </table>
+    
 </div>
 </body>
 </html>

@@ -93,7 +93,7 @@ a:hover{
         <h1>SELAMAT DATANG</h1>
         <h2>LOGIN</h2>
         <!-- Login -->
-        <form action="{{url('ceklogin')}}" method="POST">
+        <form action="{{url('masyarakatin/login')}}" method="POST">
             @if (session('info'))
                             <div class="alert alert-success" role="alert">
                                 {{session('info')}}

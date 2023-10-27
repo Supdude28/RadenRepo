@@ -16,7 +16,7 @@ class AdminController extends Controller
         return view('Administrator.dashboard');
     }
     public function loginadmin(){
-        return view('Administrator.login2');
+        return view('Administrator.loginadmin');
     }
     public function registrasiadmin(){
         // buat objek
@@ -31,6 +31,7 @@ class AdminController extends Controller
             'username'=>$request->username,
             'password'=>$request->password,
             'telp'=>$request->telp,
+            'level'=>$request->level
         ]);
         return back();
     }

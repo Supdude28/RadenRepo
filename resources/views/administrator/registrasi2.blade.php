@@ -37,9 +37,16 @@
                                 <label for="telp" class="form-label">No Telepon</label>
                                 <input type="number" class="form-control" name="telp" id="telp" placeholder="No Telepon">
                             </div>
+                            <div class="mb-3">
+                                <label for="level">Level</label>
+                                <select class="form-select" aria-label="Default select example" id="level" name="level">
+                                    <option value="petugas">Petugas</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
                                 <button class="btn form-control btn-primary mb-2">Register</button>
                                 <a href="" class="btn form-control btn-outline-success mb-2" type="reset">Batal</a>
-                                <a href="{{url('loginadmin')}}" class="btn form-control btn-outline-success mb-2">Kembali</a>
+                                <a href="{{url('adminin/loginadmin')}}" class="btn form-control btn-outline-success mb-2">Kembali</a>
                                 
                         </form>
                     </div>
