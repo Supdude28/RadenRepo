@@ -30,7 +30,10 @@
                   <td>{{$item->nik}}</td>
                   <td>{{$item->tanggal_pengaduan}}</td>
                   <td>{{$item->isi_laporan}}</td>
-                  <td></td>
+                  <td>
+                    <a href="#services" class="btn btn-secondary"><i class="bi bi-pencil-fill"></i></a>
+                    <a href="#" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                  </td>
                 </tr>
             @endforeach
         </tbody>

@@ -9,7 +9,7 @@ class Petugas extends Model
 {
     use HasFactory;
      // Set Tabel
-     protected $table = "petugas";
+     protected $table = "table_petugas";
     
      // Set Primary Key
      protected $primaryKey = "id_petugas";

@@ -19,24 +19,49 @@
                             A simple success alert—check it out!
                           </div>     --}}
                         <h4 class="h4">Daftarkan diri anda</h4>
+                        @if (session('pesan'))
+                            <div class="alert alert-dark">
+                                {{session('pesan')}}
+                            </div>
+                        @endif
                         <form action="{{url('ceking')}}" method="POST" >
                             @csrf
                             <div class="mb-3">
                                 <label for="nama_petugas" class="form-label">Nama petugas</label>
                                 <input type="text" class="form-control" name="nama_petugas" id="nama_petugas" placeholder="Nama Petugas">
                             </div>
+                            @error('nama_petugas')
+                                <div class="form-text">
+                                    {{$message}}
+                                </div>
+                            @enderror
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control" name="username" id="username" placeholder="Username">
                             </div>
+                            @error('username')
+                                <div class="form-text">
+                                    {{$message}}
+                                </div>
+                            @enderror
                             <div class="mb-3">
-                                <label for="passwrod" class="form-label">Password</label>
+                                <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                             </div>
+                            @error('password')
+                                <div class="form-text">
+                                    {{$message}}
+                                </div>
+                            @enderror
                             <div class="mb-3">
                                 <label for="telp" class="form-label">No Telepon</label>
                                 <input type="number" class="form-control" name="telp" id="telp" placeholder="No Telepon">
                             </div>
+                            @error('telp')
+                                <div class="form-text">
+                                    {{$message}}
+                                </div>
+                            @enderror
                             <div class="mb-3">
                                 <label for="level">Level</label>
                                 <select class="form-select" aria-label="Default select example" id="level" name="level">

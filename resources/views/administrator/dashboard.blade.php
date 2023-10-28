@@ -120,7 +120,7 @@
             Lapor!!
         </span>
         <div class="pale">
-          <a href="/masyarakatin/logout" class="btn btn-warning">
+          <a href="adminin/logoutadmin" class="btn btn-warning">
               Sign Out
               <i class="bi bi-box-arrow-right"></i>
           </a>
@@ -179,18 +179,23 @@
             <th scope="col">No</th>
             <th scope="col">Nama</th>
             <th scope="col">Tanggal</th>
+            <th scope="col">Isi Laporan</th>
             <th scope="col">Status</th>
           </tr>
           
         </thead>
         <tbody>
-          <tr>
-          </tr>
-          <tr>
-          </tr>
-          <tr>
-            
-          </tr>
+          @foreach ($ui as $item)
+                <tr>
+                  <td>{{$item->id_pengaduan}}</td>
+                  <td>{{$item->nik}}</td>
+                  <td>{{$item->tanggal_pengaduan}}</td>
+                  <td>{{$item->isi_laporan}}</td>
+                  <td>
+                    
+                  </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
     

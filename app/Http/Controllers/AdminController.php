@@ -9,11 +9,12 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function validasi(){
-        $lapor = new Pengaduan;
+        $lapor = new Pengaduan();
         return view('administrator.validasi',['ui'=>$lapor->all()]);
     }
     public function dashboard(){
-        return view('Administrator.dashboard');
+        $lapor = new Pengaduan();
+        return view('Administrator.dashboard',['ui'=>$lapor->all()]);
     }
     public function loginadmin(){
         return view('Administrator.loginadmin');
@@ -33,7 +34,7 @@ class AdminController extends Controller
             'telp'=>$request->telp,
             'level'=>$request->level
         ]);
-        return back();
+        return back()->with('pesan','Anda berhasil mendaftar');
     }
     public function cekloginadmin(Request $request){
         $m = new Petugas();
@@ -49,6 +50,10 @@ class AdminController extends Controller
 
         }
         
+        return back();
+    }
+    public function logoutadmin(){
+        session()->flush();
         return back();
     }
 

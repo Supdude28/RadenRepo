@@ -55,7 +55,7 @@ route::post('lagideh',[MasyarakatController::class,'lagideh']);
 
 
 // data admin
-route::get('validasi',[AdminController::class,'validasi']);
+route::get('validasi',[AdminController::class,'validasi'])->middleware(Validasiadmin::class);
 // route::post('ceklogin',[MasyarakatController::class,'ceklogin']);
 // route::get('dashboard',[AdminController::class,'dashboard']);
 route::prefix('adminin')->group(function(){
@@ -64,6 +64,7 @@ route::prefix('adminin')->group(function(){
         })->middleware(Validasiadmin::class);
         route::get('/loginadmin',[AdminController::class,'loginadmin']);
         route::post('/loginadmin',[AdminController::class,'cekloginadmin']);
+        route::get('/logoutadmin',[AdminController::class,'logoutadmin']);
     });
 route::get('registrasiadmin',[AdminController::class,'registrasiadmin']);
 route::post('ceking',[AdminController::class,'ceking']);
