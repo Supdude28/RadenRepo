@@ -29,7 +29,7 @@ class MasyarakatController extends Controller
             'password'=>$request->password,
             'telpon'=>$request->telpon,
         ]);
-        return back();
+        return back()->with('pesan','Anda berhasil mendaftar');
     }
 
     public function login(){

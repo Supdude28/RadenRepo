@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
 
     
@@ -120,7 +120,7 @@
             Lapor!!
         </span>
         <div class="pale">
-          <a href="adminin/logoutadmin" class="btn btn-warning">
+          <a href="/adminin/logoutadmin" class="btn btn-warning">
               Sign Out
               <i class="bi bi-box-arrow-right"></i>
           </a>
@@ -177,7 +177,7 @@
         <thead>
           <tr>
             <th scope="col">No</th>
-            <th scope="col">Nama</th>
+            <th scope="col">NIK</th>
             <th scope="col">Tanggal</th>
             <th scope="col">Isi Laporan</th>
             <th scope="col">Status</th>
@@ -185,7 +185,7 @@
           
         </thead>
         <tbody>
-          @foreach ($ui as $item)
+          @foreach ($au as $item)
                 <tr>
                   <td>{{$item->id_pengaduan}}</td>
                   <td>{{$item->nik}}</td>

@@ -19,7 +19,7 @@
                             A simple success alert—check it out!
                           </div>     --}}
                         <h4 class="h4">Daftarkan diri anda</h4>
-                        @if (session(pesan))
+                        @if (session('pesan'))
                             <div class="alert alert-dark">
                                 {{session('pesan')}}
                             </div>

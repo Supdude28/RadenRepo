@@ -14,7 +14,7 @@ class AdminController extends Controller
     }
     public function dashboard(){
         $lapor = new Pengaduan();
-        return view('Administrator.dashboard',['ui'=>$lapor->all()]);
+        return view('administrator.dashboard',['au'=>$lapor->all()]);
     }
     public function loginadmin(){
         return view('Administrator.loginadmin');

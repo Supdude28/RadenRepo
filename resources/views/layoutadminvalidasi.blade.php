@@ -117,6 +117,12 @@
             <i class="bi bi-phone-vibrate-fill"></i>
             Lapor!!
         </span>
+        <div class="pale">
+          <a href="/adminin/logoutadmin" class="btn btn-warning">
+              Sign Out
+              <i class="bi bi-box-arrow-right"></i>
+          </a>
+      </div>
     </nav>
 
   <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
@@ -127,7 +133,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="{{url('adminin')}}" class="nav-link link-dark" aria-current="page">
+        <a href="{{url('/adminin')}}" class="nav-link link-dark" aria-current="page">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
           Home
         </a>

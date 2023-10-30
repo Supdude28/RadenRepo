@@ -59,12 +59,10 @@ route::get('validasi',[AdminController::class,'validasi'])->middleware(Validasia
 // route::post('ceklogin',[MasyarakatController::class,'ceklogin']);
 // route::get('dashboard',[AdminController::class,'dashboard']);
 route::prefix('adminin')->group(function(){
-    Route::get('/',function(){
-            return view('Administrator.dashboard');
-        })->middleware(Validasiadmin::class);
+    Route::get('/',[AdminController::class,'dashboard'])->middleware(Validasiadmin::class);
         route::get('/loginadmin',[AdminController::class,'loginadmin']);
         route::post('/loginadmin',[AdminController::class,'cekloginadmin']);
-        route::get('/logoutadmin',[AdminController::class,'logoutadmin']);
+        route::get('logoutadmin',[AdminController::class,'logoutadmin']);
     });
 route::get('registrasiadmin',[AdminController::class,'registrasiadmin']);
 route::post('ceking',[AdminController::class,'ceking']);
