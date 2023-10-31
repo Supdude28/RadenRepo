@@ -135,24 +135,24 @@
     
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page" >
+        <a href="{{url('/adminin')}}" class="nav-link link-dark " aria-current="page" >
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
           Home
         </a>
       </li>
       <li>
-        <a href="{{url('Laporan')}}" class="nav-link link-dark" >
+        <a href="{{url('Laporan')}}" class="nav-link active" >
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
           Laporan
         </a>
       </li>
-      <i class="">
+      <i>
         <a href="{{url('validasi')}}" class="nav-link link-dark">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
           Validasi
         </a>
     </i>
-      <li class="">
+      <li>
         <a href="#" class="nav-link link-dark">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer"/></svg>
           Tanggapan
@@ -187,12 +187,11 @@
             <th scope="col">NIK</th>
             <th scope="col">Tanggal</th>
             <th scope="col">Isi Laporan</th>
-            <th scope="col">Status</th>
           </tr>
           
         </thead>
         <tbody>
-          @foreach ($au as $item)
+            @foreach ($uo as $item)
                 <tr>
                   <td>{{$item->id_pengaduan}}</td>
                   <td>{{$item->nik}}</td>

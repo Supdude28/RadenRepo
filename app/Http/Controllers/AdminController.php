@@ -12,6 +12,10 @@ class AdminController extends Controller
         $lapor = new Pengaduan();
         return view('administrator.validasi',['ui'=>$lapor->all()]);
     }
+    public function laporan(){
+        $lapor = new Pengaduan();
+        return view('Administrator.Laporan',['uo'=>$lapor->all()]);
+    }
     public function dashboard(){
         $lapor = new Pengaduan();
         return view('administrator.dashboard',['au'=>$lapor->all()]);

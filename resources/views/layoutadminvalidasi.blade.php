@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Validasi</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-
+      
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -139,12 +140,12 @@
         </a>
       </li>
       <li>
-        <a href="#"  class="nav-link link-dark">
+        <a href="{{url('Laporan')}}"  class="nav-link link-dark">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
           Laporan
         </a>
       </li>
-      <i class="bi bi-card-checklist">
+      <i class="">
         <a href="#" class="nav-link active" aria-current="page">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
           Validasi
@@ -156,6 +157,13 @@
           Tanggapan
         </a>
       </li>
+      <li class="">
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi me-2 bi bi-person" width="16" height="16"><use xlink:href="#gear-fill"/></svg>
+          Data Masyarakat
+        </a>
+      </li>
+    </ul>
     </ul>
     <hr>
     {{-- <div class="dropdown">
