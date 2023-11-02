@@ -56,6 +56,7 @@ route::post('lagideh',[MasyarakatController::class,'lagideh']);
 
 // data admin
 route::get('validasi',[AdminController::class,'validasi'])->middleware(Validasiadmin::class);
+route::get('Datam',[AdminController::class,'Datam'])->middleware(Validasiadmin::class);
 
 // route::post('ceklogin',[MasyarakatController::class,'ceklogin']);
 // route::get('dashboard',[AdminController::class,'dashboard']);

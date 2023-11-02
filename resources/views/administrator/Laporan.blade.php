@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>Laporan Masyarakat</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -21,6 +21,9 @@
 
             padding-top: 50px;
             height: 50px;
+        }
+        .oyaaa{
+          margin-right:90px;  
         }
     </style>
     
@@ -159,7 +162,7 @@
         </a>
       </li>
       <li >
-        <a href="#" class="nav-link link-dark">
+        <a href="{{url('Datam')}}" class="nav-link link-dark">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#gear-fill"/></svg>
           Data Masyarakat
         </a>
@@ -180,9 +183,11 @@
   </thead>
   <tbody>
 </table>
-    <table class="table table-hover">
-        <thead>
-          <tr>
+<div class="card oyaaa">
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
             <th scope="col">No</th>
             <th scope="col">NIK</th>
             <th scope="col">Tanggal</th>
@@ -204,6 +209,7 @@
             @endforeach
         </tbody>
     </table>
+  </div>
     
 </div>
 </body>

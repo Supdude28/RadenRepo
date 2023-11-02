@@ -20,7 +20,7 @@
                           </div>     --}}
                         <h4 class="h4">Daftarkan diri anda</h4>
                         @if (session('pesan'))
-                            <div class="alert alert-dark">
+                            <div class="alert alert-success">
                                 {{session('pesan')}}
                             </div>
                         @endif

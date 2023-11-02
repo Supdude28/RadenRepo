@@ -4,53 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Validasi</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Data Masyarakat</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <style>
-      
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+      .pale {
+            padding: 8px
         }
-      }
-      .oyaaa{
-          margin-right:90px;  
-        }
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
         .masku{
             margin-left: 320px;
             position: absolute;
-            padding-top: 50px;
             top: 50px;
             width: 80%;
+
+            padding-top: 50px;
             height: 50px;
         }
+        .oyaaa{
+          margin-right:90px;  
+        }     
     </style>
     
 </head>
 <body>
+
+
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+    </ul> 
+  </div>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="bootstrap" viewBox="0 0 118 94">
           <title>Bootstrap</title>
@@ -109,12 +113,10 @@
           <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
         </symbol>
       </svg>
-      {{-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
-        <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
-      </svg> --}}
 
       {{-- navui --}}
       <div class="b-example-divider"></div>
+  
       <nav class="navbar navbar-dark bg-primary bg-gradient px-3">
         <span class="navbar-brand fw-bold">
             <i class="bi bi-phone-vibrate-fill"></i>
@@ -127,28 +129,28 @@
           </a>
       </div>
     </nav>
-
   <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
     {{-- <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
       <span class="fs-4">Data Laporan </span>
-    </a> --}}
-    <hr>
+    </a>--}}
+    <hr> 
+    
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="{{url('/adminin')}}" class="nav-link link-dark" aria-current="page">
+        <a href="{{url('/adminin')}}" class="nav-link link-dark " aria-current="page" >
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
           Home
         </a>
       </li>
       <li>
-        <a href="{{url('Laporan')}}"  class="nav-link link-dark">
+        <a href="{{url('Laporan')}}" class="nav-link link-dark" >
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
           Laporan
         </a>
       </li>
-      <i class="">
-        <a href="#" class="nav-link active" aria-current="page">
+      <i>
+        <a href="{{url('validasi')}}" class="nav-link link-dark">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
           Validasi
         </a>
@@ -159,23 +161,54 @@
           Tanggapan
         </a>
       </li>
-      <li class="">
-        <a href="{{url('Datam')}}" class="nav-link link-dark">
-          <svg class="bi me-2 bi bi-person" width="16" height="16"><use xlink:href="#gear-fill"/></svg>
+      <li >
+        <a href="#" class="nav-link active">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#gear-fill"/></svg>
           Data Masyarakat
         </a>
       </li>
     </ul>
-    </ul>
+    
     <hr>
-    {{-- <div class="dropdown">
-      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-      </a>
-    </div>
-  </div> --}}
     {{--akhir navui  --}}
-    @yield('isi_hal')
+
+      
+        
+  <div class="masku">
+    <table>
+      <thead>
+          <tr>
+          <th scope="col">Status Pengaduan</th>
+      </tr>
+  </thead>
+  <tbody>
+</table>
+<div class="card oyaaa">
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">NIK</th>
+        <th scope="col">Nama</th>
+            <th scope="col">Telpon</th>
+          </tr>
+          
+        </thead>
+        <tbody>
+          @foreach ($oi as $item)
+                <tr>
+                  <td>{{$item->nik}}</td>
+                  <td>{{$item->nama}}</td>
+                  <td>{{$item->telpon}}</td>
+                  <td>
+                    
+                  </td>
+                </tr>
+            @endforeach
+        </tbody>
+      </table>
+    </div>
+    
 </div>
 </body>
 </html>

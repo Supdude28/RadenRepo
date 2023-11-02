@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Masyarakat;
 use App\Models\Pengaduan;
 use App\Models\Petugas;
 use Illuminate\Http\Request;
@@ -11,6 +12,10 @@ class AdminController extends Controller
     public function validasi(){
         $lapor = new Pengaduan();
         return view('administrator.validasi',['ui'=>$lapor->all()]);
+    }
+    public function Datam(){
+        $ngb = new Masyarakat();
+        return view('administrator.Datam' ,['oi'=>$ngb->all()]);
     }
     public function laporan(){
         $lapor = new Pengaduan();
@@ -46,10 +51,8 @@ class AdminController extends Controller
         $m = $m->where('username',$request->input('username'))->where('password',$request->input('password'));
 
         if($m->exists()){
-            session([
-                'username'=> $request->input('username'),
-                'password'=> $request->input('password')
-            ]);
+            $bebas = $m->first();
+            session(['aing'=>$bebas]);
             return redirect('/adminin');
 
         }

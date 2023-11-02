@@ -18,8 +18,8 @@
 }
 
 .container {
-    height: 60%;
-    width: 500px;
+    height: 70%;
+    width: 400px;
     top: 50%;
     left: 50%;
    box-shadow: 0 2px 10px black;

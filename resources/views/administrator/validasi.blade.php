@@ -11,7 +11,9 @@
         </thead>
         <tbody>
     </table>
-    <table class="table table-hover">
+    <div class="card oyaaa">
+      
+      <table class="table table-hover">
         
         <thead>
           <tr>
@@ -38,4 +40,5 @@
             @endforeach
         </tbody>
     </table>
+  </div>
 @endsection

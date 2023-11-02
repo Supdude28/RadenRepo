@@ -22,6 +22,9 @@
             padding-top: 50px;
             height: 50px;
         }
+        .oyaaa{
+          margin-right:90px;  
+        }
     </style>
     
 </head>
@@ -120,7 +123,9 @@
             Lapor!!
         </span>
         <div class="pale">
-          <a href="/adminin/logoutadmin" class="btn btn-warning">
+          <div class="dropdown">
+          
+          <a   href="/adminin/logoutadmin" class="btn btn-warning">
               Sign Out
               <i class="bi bi-box-arrow-right"></i>
           </a>
@@ -159,7 +164,7 @@
         </a>
       </li>
       <li >
-        <a href="#" class="nav-link link-dark">
+        <a href="{{url('Datam')}}" class="nav-link link-dark">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#gear-fill"/></svg>
           Data Masyarakat
         </a>
@@ -180,6 +185,7 @@
   </thead>
   <tbody>
 </table>
+<div class="oyaaa card">
     <table class="table table-hover">
         <thead>
           <tr>
@@ -205,7 +211,7 @@
             @endforeach
         </tbody>
     </table>
-    
+  </div>
 </div>
 </body>
 </html>
