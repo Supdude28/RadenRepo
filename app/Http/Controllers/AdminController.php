@@ -6,6 +6,7 @@ use App\Models\Masyarakat;
 use App\Models\Pengaduan;
 use App\Models\Petugas;
 use Illuminate\Http\Request;
+use Illuminate\support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -22,6 +23,11 @@ class AdminController extends Controller
         return view('Administrator.Laporan',['uo'=>$lapor->all()]);
     }
     public function dashboard(){
+        $status = [
+            'masuk' => DB::table('table_pengaduan')->where('status', '0')->count(),
+            'proses' => DB::table('table_pengaduan')->where('status', 'proses')->count(),
+            'selesai' => DB::table('table_pengaduan')->where('status', 'selesai')->count()
+        ];
         $lapor = new Pengaduan();
         return view('administrator.dashboard',['au'=>$lapor->all()]);
     }

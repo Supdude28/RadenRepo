@@ -205,7 +205,16 @@
                   <td>{{$item->tanggal_pengaduan}}</td>
                   <td>{{$item->isi_laporan}}</td>
                   <td>
-                    
+                    @switch($item->status)
+                        @case('proses')
+                            <button type="button" class="btn btn-primary">{{$item->status}}</button>
+                            @break
+                        @case('selasai')
+                            <button type="button" class="btn btn-success">{{$item->status}}</button>
+                            @break
+                        @default
+                            <button type="button" class="btn btn-warning">Tertunda</button>
+                    @endswitch
                   </td>
                 </tr>
             @endforeach
