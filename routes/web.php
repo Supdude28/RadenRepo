@@ -65,10 +65,12 @@ route::prefix('adminin')->group(function(){
         route::get('/loginadmin',[AdminController::class,'loginadmin']);
         route::post('/loginadmin',[AdminController::class,'cekloginadmin']);
         route::get('logoutadmin',[AdminController::class,'logoutadmin']);
+        route::get('/status{id}',[AdminController::class,'status'])->middleware(Validasiadmin::class);
         
     });
-route::get('registrasiadmin',[AdminController::class,'registrasiadmin']);
-route::post('ceking',[AdminController::class,'ceking']);
+    route::get('registrasiadmin',[AdminController::class,'registrasiadmin']);
+    route::get('tanggapan',[AdminController::class,'tanggap'])->middleware(Validasiadmin::class);
+    route::post('ceking',[AdminController::class,'ceking']);
 route::get('Laporan',[AdminController::class,'laporan'])->middleware(Validasiadmin::class);
 
 

@@ -156,7 +156,7 @@
         </a>
     </i>
       <li>
-        <a href="#" class="nav-link link-dark">
+        <a href="tanggapan" class="nav-link link-dark">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer"/></svg>
           Tanggapan
         </a>
@@ -196,7 +196,7 @@
           
         </thead>
         <tbody>
-            @foreach ($uo as $item)
+            {{-- @foreach ($uo as $item)
                 <tr>
                   <td>{{$item->id_pengaduan}}</td>
                   <td>{{$item->nik}}</td>
@@ -206,7 +206,7 @@
                     
                   </td>
                 </tr>
-            @endforeach
+            @endforeach --}}
         </tbody>
     </table>
   </div>

@@ -14,6 +14,9 @@ class AdminController extends Controller
         $lapor = new Pengaduan();
         return view('administrator.validasi',['ui'=>$lapor->all()]);
     }
+    public function tanggap(){
+        return view('administrator.validasi');
+    }
     public function Datam(){
         $ngb = new Masyarakat();
         return view('administrator.Datam' ,['oi'=>$ngb->all()]);
@@ -21,6 +24,11 @@ class AdminController extends Controller
     public function laporan(){
         $lapor = new Pengaduan();
         return view('Administrator.Laporan',['uo'=>$lapor->all()]);
+    }
+    public function status($id){
+        $dang = new Pengaduan();
+        $dang->find($id)->update(['status'=>'proses']);
+        return redirect();
     }
     public function dashboard(){
         $status = [

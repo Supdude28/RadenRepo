@@ -32,9 +32,11 @@
                   <td>{{$item->nik}}</td>
                   <td>{{$item->tanggal_pengaduan}}</td>
                   <td>{{$item->isi_laporan}}</td>
+                  
                   <td>
-                    <a href="#services" class="btn btn-secondary"><i class="bi bi-pencil-fill"></i></a>
-                    <a href="#" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                    <div class="d-flex gap-2 mb-3">
+                        <a href="{{url('adminin/status'.$item->id_pengaduan)}}" class="btn btn-primary">Validasi</a>
+                    </div>
                   </td>
                 </tr>
             @endforeach
